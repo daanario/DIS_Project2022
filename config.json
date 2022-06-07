@@ -1,0 +1,15 @@
+{
+"SECRET_KEYS":{
+    "APP_SECRET_KEY": "SomeRandomKey1234"
+}, 
+"PATHS":{
+    "PASSWORD_DATA": "top_200_password_2020_by_country.csv"
+}, 
+"DATABASE":{
+    "dbname": "postgres",
+    "schema": "DIS",
+    "user": "postgres",
+    "host": "localhost",
+    "password": "hdc45nng"
+}
+}
