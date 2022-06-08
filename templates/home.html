@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<h1 style="color:green;text-align:center;">Welcome to password checker!</h1>
+<html lang="en">
+<head>
+    <h>Choose your country and see the 200 most common passwords</h>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+<body>
+    <form action="/" method="POST">
+    <select name="country" method="GET" action="/">
+        <option value="{{countries[0]}}" selected>{{countries[0]}}</option>
+        {% for country in countries[1:] %}
+          <option value="{{country}}">{{country}}</option>
+        {% endfor %}
+      </select>
+    </br>
+        <input type = "submit" value="Submit"/>
+    </form>
+</br>
+</br>
+
+    
+    <h>Write your password and see if it is in top 200 most common passwords in any countries</h>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+<body>
+    <form action="/" method="CHECK">
+            <div>
+              <input id="example" type="text" name="password" method="GET" action="/">
+            </div>
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+
+</body>
+</html>
+

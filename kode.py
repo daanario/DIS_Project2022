@@ -2,6 +2,10 @@
 import json
 from psycopg2 import sql, connect
 import pandas as pd
+from flask import Flask, request, render_template, session, flash
+
+
+
 
 with open('config.json') as jsonfile:
     CONFIG = json.load(jsonfile)
@@ -12,6 +16,7 @@ conn = connect(dbname=CONFIG["DATABASE"]["dbname"],
         host=CONFIG["DATABASE"]["host"],
         password=CONFIG["DATABASE"]["password"])
 cur = conn.cursor()
+
 
 
 
