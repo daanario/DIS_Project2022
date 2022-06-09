@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<h1 style="color:#04AA6D;text-align:center;">This is the dropdown menu!</h1>
+<html lang="en">
+<head>
+    <h>Choose your country and see the 200 most common passwords</h>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+</head>
+<body>
+    <form action="/dropdown" method="POST">
+    <select name="country" method="GET" action="/dropdown">
+        <option value="{{countries[0]}}" selected>{{countries[0]}}</option>
+        {% for country in countries[1:] %}
+          <option value="{{country}}">{{country}}</option>
+        {% endfor %}
+      </select>
+    </br>
+        <input type = "submit" value="Submit"/>
+    </form>
+</br>
+</br>
+{% endblock content %}
+
